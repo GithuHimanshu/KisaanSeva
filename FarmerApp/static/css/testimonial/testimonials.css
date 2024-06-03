@@ -1,0 +1,149 @@
+body {
+  height: 100vh;
+  background-color: var(--body-color);
+  background-image: url("/static/images/banner-bg.png");
+}
+
+main {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.page-header {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeInDown 1s forwards;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  color: var(--heading-color);
+}
+
+.page-header .reviews {
+  font-style: italic;
+  font-weight: normal;
+}
+
+.testimonial-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  animation: slide-up 1s ease-out;
+}
+
+.testimonial-card {
+  background: var(--cards-bg);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+  opacity: 0;
+  animation: fadeInUp 0.5s forwards;
+  animation: scale-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.testimonial-card img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  animation: scale-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.testimonial-content {
+  text-align: left;
+  flex: 1;
+}
+
+.testimonial-content .headline {
+  color: var(--cards-heading);
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  animation: slide-up 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.testimonial-content .quote {
+  font-size: 1rem;
+  color: var(--cards-text);
+  /* animation: slide-up 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; */
+  animation: scale-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .testimonial-card img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .testimonial-content .headline {
+    font-size: 1.1rem;
+  }
+
+  .testimonial-content .quote {
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

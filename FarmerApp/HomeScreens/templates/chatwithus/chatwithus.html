@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming Chat</title>
+
+    <link rel="stylesheet" href='{%static "css/chatwithus/chatwithus.css"%}' />
+</head>
+
+<body>
+    <div class="chat-container">
+        <div class="chat-box farmer">
+            <div class="chat-container_heading">Connect with others</div>
+            <div class="chat-message received">
+                <div class="avatar">
+                    <img src="https://images.pexels.com/photos/14915250/pexels-photo-14915250.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Farmer Avatar">
+                </div>
+                <div class="message-info">
+                    <p class="name">John Doe</p>
+                    <p class="message-text">Hello there! How can I help you today?</p>
+                    <p class="timestamp">Apr 30, 2024 10:30 AM</p>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-info">
+                    <p class="message-text">Hi, I have a question about crop cultivation.</p>
+                    <p class="timestamp">Apr 30, 2024 10:35 AM</p>
+                </div>
+            </div>
+            <!-- More chat messages from the farmer here -->
+        </div>
+        <div class="chat-box research-scholar">
+            <div class="chat-message received">
+                <div class="avatar">
+                    <img src="https://images.pexels.com/photos/5933419/pexels-photo-5933419.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Research Scholar Avatar">
+                </div>
+                <div class="message-info">
+                    <p class="name">Jane Smith</p>
+                    <p class="message-text">Good day! How can I assist you with your research?</p>
+                    <p class="timestamp">Apr 30, 2024 11:00 AM</p>
+                </div>
+            </div>
+            <!-- More chat messages from the research scholar here -->
+        </div>
+        <div class="input-box">
+            <input type="text" placeholder="Type your message...">
+            <button>Send</button>
+        </div>
+    </div>
+</body>
+
+</html>

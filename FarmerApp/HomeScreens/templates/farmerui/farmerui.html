@@ -1,0 +1,749 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Farmer UI</title>
+
+    <link rel="stylesheet" href="{%static 'css/farmerui/bootstrap.min.css'%}" />
+    <link
+      rel="stylesheet"
+      href="{%static 'css/farmerui/font-awesome.min.css'%}"
+    />
+
+    <link rel="stylesheet" href="{%static 'css/farmerui/global.css'%}" />
+    <link rel="stylesheet" href="{%static 'css/farmerui/index.css'%}" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script src="{%static 'js/bootstrap.bundle.min.js'%}"></script>
+  </head>
+  <body>
+    <!-- header -->
+    {% include "navbar/navbar.html" %}
+    <!-- crousal -->
+    <section id="center" class="center_home">
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+            class=""
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+            class=""
+            aria-current="true"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src=" {% static 'images/img/k2.jpg' %}"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div
+              class="carousel-caption d-none d-md-block"
+              style="background-color: rgba(0, 80, 0, 0.5)"
+            >
+              <h1 class="text-white big">Welcome To KISSAN SEVA</h1>
+              <p class="col_3 mb-4">
+                Your trusted partner in agriculture. We provide essential
+                farming tips and the latest research to help you achieve better
+                yields and sustainable farming practices. Let's grow together
+                towards a prosperous and innovative future in farming!
+              </p>
+              <h5 class="mb-0">
+                <a class="button" href="#">Discover More </a>
+              </h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src=" {% static 'images/img/k4.jpg' %}"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div
+              class="carousel-caption d-none d-md-block"
+              style="background-color: rgba(0, 80, 0, 0.5)"
+            >
+              <h1 class="text-white big">We Provide Best Details</h1>
+              <p class="col_3 mb-4">
+                We provide essential farming tips, the latest research, and
+                detailed guidance to help you achieve better yields and
+                sustainable farming practices. Our goal is to empower you with
+                the knowledge and tools needed for a prosperous and innovative
+                future in farming. Explore our resources and let's grow
+                together!
+              </p>
+              <h5 class="mb-0">
+                <a class="button" href="#">Discover More </a>
+              </h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="{% static 'images/img/k4.jpg' %}"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div
+              class="carousel-caption d-none d-md-block"
+              style="background-color: rgba(0, 80, 0, 0.5)"
+            >
+              <h1 class="text-white big">years Of Experience</h1>
+              <p class="col_3 mb-4">
+                Benefit from our years of experience in agriculture! At Kissan
+                Seva, we've honed our expertise to provide you with the most
+                effective farming tips, backed by years of practical knowledge
+                and research. Let our experience guide you towards greater
+                productivity and success on your farm.
+              </p>
+              <h5 class="mb-0">
+                <a class="button" href="#">Discover More </a>
+              </h5>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <!-- about aggri -->
+    <section id="exep" style="background-color: rgba(30, 166, 71, 0.714)">
+      <div class="container">
+        <div class="row exep_1">
+          <div class="col-md-6">
+            <div class="exep_1lm position-relative">
+              <div class="exep_1lm1">
+                <img src="{% static 'images/img/k5.jpg' %}" alt="abc" />
+              </div>
+              <div class="exep_1lm2 position-absolute">
+                <img src=" {% static 'images/img/k6(1).jpg' %}" alt="abc" />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="exep_1r" style="text-align: center">
+              <h5 class="col_1">ABOUT AGRICULTURE</h5>
+              <h2>WE’RE LEADER IN AGRICULTURE MARKET</h2>
+              <span class="material-symbols-outlined" style="font-size: 60px">
+                potted_plant
+              </span>
+
+              <p>
+                Step into a world of boundless opportunity with Kissan Seva,
+                where innovation meets integrity. As leaders in the making, our
+                passion for agriculture drives us forward, while our unwavering
+                commitment to honesty and reliability ensures your journey with
+                us is nothing short of extraordinary. Join us today and
+                experience the difference trust and innovation can make in
+                shaping a brighter future for farming."
+              </p>
+              <div class="exep_1ri row mt-3">
+                <div class="col-md-2">
+                  <div class="exep_1ril">
+                    <span
+                      class="material-symbols-outlined"
+                      style="font-size: 40px"
+                    >
+                      shopping_basket
+                    </span>
+                  </div>
+                </div>
+                <div class="col-md-10">
+                  <div class="exep_1rir">
+                    <h3>Growing Fruits and Vegetables</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="exep_1ri row mt-3">
+                <div class="col-md-2">
+                  <div class="exep_1ril">
+                    <span
+                      class="material-symbols-outlined"
+                      style="font-size: 40px"
+                    >
+                      grocery
+                    </span>
+                  </div>
+                </div>
+                <div class="col-md-10">
+                  <div class="exep_1rir">
+                    <h3>Tips for Ripening your Fruits</h3>
+                  </div>
+                </div>
+              </div>
+              <p>
+                Unlock the full potential of your harvest with our expert tips
+                on ripening fruits. Grow smarter, harvest better with Kissan
+                Seva.
+              </p>
+              <h5 class="mb-0"><a class="button" href="#">Learn More </a></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="serv" style="background-color: rgba(30, 166, 71, 0.714)">
+      <div class="container">
+        <div class="row serv_1 text-center mb-3">
+          <div class="col-md-12">
+            <h5 class="col_1">INDIA'S CROP DIVERSITY</h5>
+            <h2 class="mb-0">A CLOSER LOOK</h2>
+
+            <span class="material-symbols-outlined" style="font-size: 60px">
+              psychiatry
+            </span>
+          </div>
+        </div>
+        <div class="row serv_2">
+          <div class="col-md-3">
+            <div class="serv_2i">
+              <div class="serv_2i1">
+                <h4>RICE</h4>
+                <p class="mb-0">
+                  Staple food grain, widely cultivated in flooded fields,
+                  forming a significant part of the Indian diet.
+                </p>
+              </div>
+              <div class="serv_2i2 position-relative">
+                <div class="serv_2i2i">
+                  <div class="grid">
+                    <figure class="effect-jazz mb-0">
+                      <a href="#"
+                        ><img
+                          src=" {% static 'images/img/rice.jpg' %}"
+                          class="w-100"
+                          alt="img25"
+                      /></a>
+                    </figure>
+                  </div>
+                </div>
+                <div class="serv_2i2i1 position-absolute">
+                  <!-- <span
+                    ><a href="#"><i class="fa fa-long-arrow-right"></i> </a
+                  ></span> -->
+                  <span
+                    class="material-symbols-outlined"
+                    style="
+                      font-size: 40px;
+                      background-color: rgb(241, 221, 105);
+                      border-radius: 50%;
+                    "
+                  >
+                    arrow_right_alt
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="serv_2i">
+              <div class="serv_2i1">
+                <h4>WHEAT</h4>
+                <p class="mb-0">
+                  Important cereal crop grown in the cooler regions, used for
+                  making flour and various wheat-based products.
+                </p>
+              </div>
+              <div class="serv_2i2 position-relative">
+                <div class="serv_2i2i">
+                  <div class="grid">
+                    <figure class="effect-jazz mb-0">
+                      <a href="#"
+                        ><img
+                          src="{% static 'images/img/wheat.jpg' %}"
+                          class="w-100"
+                          alt="img25"
+                      /></a>
+                    </figure>
+                  </div>
+                </div>
+                <div class="serv_2i2i1 position-absolute">
+                  <!-- <span
+                    ><a href="#"><i class="fa fa-long-arrow-right"></i> </a
+                  ></span> -->
+                  <span
+                    class="material-symbols-outlined"
+                    style="
+                      font-size: 40px;
+                      background-color: rgb(241, 221, 105);
+                      border-radius: 50%;
+                    "
+                  >
+                    arrow_right_alt
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="serv_2i">
+              <div class="serv_2i1">
+                <h4>SUGARCANE</h4>
+                <p class="mb-0">
+                  Tall perennial grass cultivated for sugar and ethanol
+                  production, thriving in tropical climates.
+                </p>
+              </div>
+              <div class="serv_2i2 position-relative">
+                <div class="serv_2i2i">
+                  <div class="grid">
+                    <figure class="effect-jazz mb-0">
+                      <a href="#"
+                        ><img
+                          src="{% static 'images/img/sugarcane.jpg' %}"
+                          class="w-100"
+                          alt="img25"
+                      /></a>
+                    </figure>
+                  </div>
+                </div>
+                <div class="serv_2i2i1 position-absolute">
+                  <!-- <span
+                    ><a href="#"><i class="fa fa-long-arrow-right"></i> </a
+                  ></span> -->
+                  <span
+                    class="material-symbols-outlined"
+                    style="
+                      font-size: 40px;
+                      background-color: rgb(241, 221, 105);
+                      border-radius: 50%;
+                    "
+                  >
+                    arrow_right_alt
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="serv_2i">
+              <div class="serv_2i1">
+                <h4>VEGETABLES</h4>
+                <p class="mb-0">
+                  Diverse range of edible plants, including potatoes, tomatoes,
+                  and onions, contributing to balanced diets across the nation.
+                </p>
+              </div>
+              <div class="serv_2i2 position-relative">
+                <div class="serv_2i2i">
+                  <div class="grid">
+                    <figure class="effect-jazz mb-0">
+                      <a href="#"
+                        ><img
+                          src=" {% static 'images/img/vegetables.jpg' %}"
+                          class="w-100"
+                          alt="img25"
+                      /></a>
+                    </figure>
+                  </div>
+                </div>
+                <div class="serv_2i2i1 position-absolute">
+                  <span
+                    class="material-symbols-outlined"
+                    style="
+                      font-size: 40px;
+                      background-color: rgb(241, 221, 105);
+                      border-radius: 50%;
+                    "
+                  >
+                    arrow_right_alt
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proj" style="background-color: rgba(30, 166, 71, 0.714)">
+      <div class="container">
+        <div class="row serv_1 text-center mb-3">
+          <div class="col-md-12">
+            <h5 class="col_1">EXPLORE AGRICULTURAL RESEARCH AND INNOVATIONS</h5>
+            <h2 class="mb-0">OUR RECENT AGRICULTURAL RESEARCH</h2>
+
+            <span class="material-symbols-outlined" style="font-size: 60px">
+              temp_preferences_eco
+            </span>
+          </div>
+        </div>
+        <div class="row proj_1 m-0">
+          <div class="col-md-4">
+            <div class="proj_1i position-relative">
+              <div class="proj_1i1">
+                <div class="grid clearfix">
+                  <figure class="effect-jazz mb-0">
+                    <a href="#"
+                      ><img
+                        src=" {% static 'images/img/smart.jpg' %}"
+                        class="w-100"
+                        alt="img25"
+                    /></a>
+                  </figure>
+                </div>
+              </div>
+              <div class="proj_1i2 position-absolute w-100">
+                <h3 class="text-white">SMART IRRIGATION SYSTEMS</h3>
+                <p class="text-light">
+                  Using sensors and technology to optimize water use, crucial
+                  for water-scarce regions in India.
+                </p>
+                <h5 class="mb-0 mt-3">
+                  <a class="button" href="#">Read More </a>
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="proj_1i position-relative">
+              <div class="proj_1i1">
+                <div class="grid clearfix">
+                  <figure class="effect-jazz mb-0">
+                    <a href="#"
+                      ><img
+                        src=" {% static 'images/img/high yielding.jpg' %}"
+                        class="w-100"
+                        alt="img25"
+                    /></a>
+                  </figure>
+                </div>
+              </div>
+              <div class="proj_1i2 position-absolute w-100">
+                <h3 class="text-white">HIGH-YIELDING CROP VARIETIES</h3>
+                <p class="text-light">
+                  Developing crops resistant to pests and diseases, vital for
+                  improving yields and farmer income.
+                </p>
+                <h5 class="mb-0 mt-3">
+                  <a class="button" href="#">Read More </a>
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="proj_1i position-relative">
+              <div class="proj_1i1">
+                <div class="grid clearfix">
+                  <figure class="effect-jazz mb-0">
+                    <a href="#"
+                      ><img
+                        src="{% static 'images/img/organic.jpg ' %}"
+                        class="w-100"
+                        alt="img25"
+                    /></a>
+                  </figure>
+                </div>
+              </div>
+              <div class="proj_1i2 position-absolute w-100">
+                <h3 class="text-white">ORGANIC FARMING PRACTICES</h3>
+                <p class="text-light">
+                  Promoting natural methods to reduce chemical usage, ensuring
+                  healthier produce and environmental sustainability.
+                </p>
+                <h5 class="mb-0 mt-3">
+                  <a class="button" href="#">Read More </a>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- choosing   -->
+    <section id="benef" style="background-color: rgba(30, 166, 71, 0.714)">
+      <div class="container">
+        <div class="row benef_1 mb-3">
+          <div class="col-md-4">
+            <div class="benef_1l">
+              <h5 class="col_1">OUR BENIFITS</h5>
+              <h3>WHY CHOOSE KISSAN SEVA?</h3>
+              <span class="material-symbols-outlined" style="font-size: 40px">
+                loyalty
+              </span>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="benef_1l">
+              <p>
+                Your Trusted Partner for Agricultural Excellence! Experience
+                unrivaled benefits, expert guidance, and a commitment to your
+                farming success. With KISSAN SEVA, reliability and innovation go
+                hand in hand, ensuring you thrive every step of the way. Join us
+                and cultivate a future of trust and prosperity in agriculture!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row award_1">
+          <div class="col-md-3">
+            <div
+              class="award_1i text-center"
+              style="background-color: rgb(7, 106, 7); border-radius: 50%"
+            >
+              <!-- <span style="font-size: 50px" class="col_4"
+                ><i class="fa fa-car" style="color: rgb(255, 255, 255)"></i
+              ></span> -->
+              <span
+                class="material-symbols-outlined"
+                style="font-size: 50px; color: white"
+              >
+                agriculture
+              </span>
+              <h1 class="text-white mt-2">100</h1>
+              <h5 class="col_3 mb-0">+ Happy Farmers</h5>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div
+              class="award_1i text-center"
+              style="background-color: rgb(7, 106, 7); border-radius: 50%"
+            >
+              <!-- <span style="font-size: 50px" class="col_4"
+                ><i class="fa fa-users" style="color: rgb(255, 255, 255)"></i
+              ></span> -->
+              <span
+                class="material-symbols-outlined"
+                style="font-size: 50px; color: white"
+              >
+                group
+              </span>
+              <h1 class="text-white mt-2">20</h1>
+              <h5 class="col_3 mb-0">+ Total Members</h5>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div
+              class="award_1i text-center"
+              style="background-color: rgb(7, 106, 7); border-radius: 50%"
+            >
+              <!-- <span style="font-size: 50px" class="col_4"
+                ><i
+                  class="fa fa-user-plus"
+                  style="color: rgb(255, 255, 255)"
+                ></i
+              ></span> -->
+              <span
+                class="material-symbols-outlined"
+                style="font-size: 50px; color: white"
+              >
+                account_circle
+              </span>
+              <h1 class="text-white mt-2">60</h1>
+              <h5 class="col_3 mb-0">+ Expert Instructor</h5>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div
+              class="award_1i text-center"
+              style="background-color: rgb(7, 106, 7); border-radius: 50%"
+            >
+              <!-- <span style="font-size: 50px" class="col_4"
+                ><i class="fa fa-trophy" style="color: rgb(255, 255, 255)"></i
+              ></span> -->
+              <span
+                class="material-symbols-outlined"
+                style="font-size: 50px; color: white"
+              >
+                trophy
+              </span>
+              <h1 class="text-white mt-2">10</h1>
+              <h5 class="col_3 mb-0">+ Win Awards</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- blogs news -->
+    <section id="news" style="background-color: rgba(30, 166, 71, 0.714)">
+      <div class="container">
+        <div class="row serv_1 text-center mb-3">
+          <div class="col-md-12">
+            <h5 class="col_1">FROM THE BLOG</h5>
+            <h2 class="mb-0">NEWS & ARTICLES</h2>
+            <!-- <span style="font-size: 40px"
+              ><i class="fa fa-leaf col_4"></i
+            ></span> -->
+            <span class="material-symbols-outlined" style="font-size: 60px">
+              newspaper
+            </span>
+          </div>
+        </div>
+        <div class="row news_1">
+          <div class="col-md-4">
+            <div class="news_1i position-relative">
+              <div class="news_1i1">
+                <div class="grid clearfix">
+                  <figure class="effect-jazz mb-0">
+                    <a href="#"
+                      ><img
+                        src=" {% static 'images/img/b1.jpg ' %}"
+                        class="w-100"
+                        alt="img25"
+                    /></a>
+                  </figure>
+                </div>
+              </div>
+              <div class="news_1i2 text-center position-absolute">
+                <ul>
+                  <li style="margin-right: 20px" class="d-inline-block">
+                    <a href="#"> ADMIN</a>
+                  </li>
+                  <li class="d-inline-block">
+                    <a href="#"> 3 COMMENTS</a>
+                  </li>
+                </ul>
+                <h4>
+                  <a href="#">SUCCESS STORIES OF INDIAN FARMERS</a>
+                </h4>
+                <p>
+                  Highlight stories of successful farmers who have overcome
+                  challenges and achieved remarkable results in their
+                  agricultural ventures.
+                </p>
+                <h5 class="mb-0"><a class="button" href="#">Read More </a></h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="news_1i position-relative">
+              <div class="news_1i1">
+                <div class="grid clearfix">
+                  <figure class="effect-jazz mb-0">
+                    <a href="#"
+                      ><img
+                        src=" {% static 'images/img/b3.jpg ' %}"
+                        class="w-100"
+                        alt="img25"
+                    /></a>
+                  </figure>
+                </div>
+              </div>
+              <div class="news_1i2 text-center position-absolute">
+                <ul>
+                  <li style="margin-right: 20px" class="d-inline-block">
+                    <a href="#"> ADMIN</a>
+                  </li>
+                  <li class="d-inline-block">
+                    <a href="#"> 3 COMMENTS</a>
+                  </li>
+                </ul>
+                <h4><a href="#">CROP CULTIVATION TECHNIQUES</a></h4>
+                <p>
+                  Share insights and tips on crop cultivation techniques
+                  tailored to Indian farming conditions, including information
+                  on soil preparation, planting methods, and crop rotation.
+                </p>
+                <h5 class="mb-0"><a class="button" href="#">Read More </a></h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="news_1i position-relative">
+              <div class="news_1i1">
+                <div class="grid clearfix">
+                  <figure class="effect-jazz mb-0">
+                    <a href="#"
+                      ><img
+                        src=" {% static 'images/img/b5.jpg ' %}"
+                        class="w-100"
+                        alt="img25"
+                    /></a>
+                  </figure>
+                </div>
+              </div>
+              <div class="news_1i2 text-center position-absolute">
+                <ul>
+                  <li style="margin-right: 20px" class="d-inline-block">
+                    <a href="#"> ADMIN</a>
+                  </li>
+                  <li class="d-inline-block">
+                    <a href="#">3 COMMENTS</a>
+                  </li>
+                </ul>
+                <h4><a href="#">ORGANIC FARMING PRACTICES</a></h4>
+                <p>
+                  Educate readers about the benefits and techniques of organic
+                  farming, including natural pest control, composting, and soil
+                  enrichment methods.
+                </p>
+                <h5 class="mb-0"><a class="button" href="#">Read More </a></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- last msg -->
+    <section
+      id="qual"
+      style="background-image: url(/static/images/img/k1.avif)"
+    >
+      <div class="type_m">
+        <div class="container">
+          <div class="row type_1 text-center">
+            <div class="col-md-12">
+              <h2 class="text-white">
+                DELIVERING EXCELLENCE, PROVIDING CONTENT THAT EXCEEDS YOUR
+                EXPECTATIONS
+              </h2>
+              <p class="text-light mt-3">
+                We're dedicated to providing you with content that goes above
+                and beyond your expectations. From insightful articles to
+                breaking news, we're committed to delivering excellence in every
+                piece of content. Explore, learn, and let us exceed your
+                expectations every step of the way.
+              </p>
+              <h5 class="mb-0 mt-4">
+                <a class="button" href="#">Discover More </a>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% include "footer/footer.html" %}
+  </body>
+</html>

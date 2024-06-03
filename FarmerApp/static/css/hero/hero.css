@@ -1,0 +1,115 @@
+.homepage {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: url("/static/images/6.jpg") no-repeat center center/cover;
+}
+
+.homepage::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.homepage .content {
+  display: flex;
+  height: 96%;
+  z-index: 3;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.homepage .content h1 {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  font-size: 72px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.homepage .content .text {
+  margin-bottom: 50px;
+  color: #fff;
+  font-size: 20px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.homepage .content a {
+  color: var(--text-color);
+  display: block;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 0 10px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background: var(--button-col);
+  transition: 0.4s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.homepage .content a:hover {
+  color: #fff;
+  background: var(--button-col-hover);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and below */
+@media (max-width: 1024px) {
+  .homepage .content h1 {
+    font-size: 60px;
+  }
+
+  .homepage .content .text {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .homepage .content a {
+    font-size: 16px;
+    padding: 8px 25px;
+  }
+}
+
+/* Mobile devices and below */
+@media (max-width: 768px) {
+  .homepage .content h1 {
+    font-size: 48px;
+  }
+
+  .homepage .content .text {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .homepage .content a {
+    font-size: 14px;
+    padding: 7px 20px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .homepage .content h1 {
+    font-size: 36px;
+  }
+
+  .homepage .content .text {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .homepage .content a {
+    font-size: 12px;
+    padding: 5px 15px;
+  }
+}

@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Blog</title>
+    <link rel="stylesheet" href="{%static 'css/blog/blogs.css'%}" />
+  </head>
+
+  <body>
+    {% include "navbar/navbar.html" %}
+
+    <main>
+      <!-- <div>
+        <a href="/"
+          ><img src="{%static 'images/l1.png'%}" class="blogo" alt="Logo"
+        /></a>
+      </div> -->
+      <h1>Our Trending Blogs & Article</h1>
+      <div class="blog-posts">
+        <section class="blog-post">
+          <img src="{%static 'images/b1.png'%}" alt="Blog Post Image" />
+          <h2>Post Title 1</h2>
+          <p class="meta">Posted by John Doe on January 1, 2024</p>
+          <div class="blog-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et
+              eros felis. Pellentesque habitant morbi tristique senectus et
+              netus et malesuada fames ac turpis egestas. Lorem ipsum dolor sit
+              amet consectetur, adipisicing elit. Incidunt ad architecto aut
+              delectus quam esse, eligendi, molestias veniam harum assumenda
+              alias corrupti officia similique, voluptates possimus eaque cum
+              velit. Recusandae?
+            </p>
+          </div>
+        </section>
+
+        <section class="blog-post">
+          <img src="{%static 'images/b2.jpg'%}" alt="Blog Post Image" />
+          <h2>Post Title 2</h2>
+          <p class="meta">Posted by Jane Smith on January 5, 2024</p>
+          <div class="blog-content">
+            <p>
+              Nulla facilisi. Sed commodo nisi ac urna molestie fermentum.
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+              posuere cubilia Curae; Cras fringilla justo vel felis placerat
+              malesuada. Lorem ipsum dolor sit amet consectetur, adipisicing
+              elit. Fuga voluptate debitis culpa placeat dicta corrupti quod ex,
+              provident exercitationem architecto nulla repellat, dolore
+              voluptates dolor neque adipisci minima mollitia magni.
+            </p>
+          </div>
+        </section>
+
+        <section class="blog-post">
+          <img src="{%static 'images/b3.jpg'%}" alt="Blog Post Image" />
+          <h2>Post Title 3</h2>
+          <p class="meta">Posted by Jane Smith on January 5, 2024</p>
+          <div class="blog-content">
+            <p>
+              Nulla facilisi. Sed commodo nisi ac urna molestie fermentum.
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+              posuere cubilia Curae; Cras fringilla justo vel felis placerat
+              malesuada. Lorem, ipsum dolor sit amet consectetur adipisicing
+              elit. Ex saepe reiciendis enim nesciunt voluptatibus est, eum
+              natus vitae? Quasi doloribus commodi sed suscipit corrupti
+              provident ipsa quis rem neque id.
+            </p>
+          </div>
+        </section>
+
+        <section class="blog-post">
+          <img src="{%static 'images/b4.jpg'%}" alt="Blog Post Image" />
+          <h2>Post Title 4</h2>
+          <p class="meta">Posted by Jane Smith on January 5, 2024</p>
+          <div class="blog-content">
+            <p>
+              Nulla facilisi. Sed commodo nisi ac urna molestie fermentum.
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+              posuere cubilia Curae; Cras fringilla justo vel felis placerat
+              malesuada. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Molestiae reprehenderit dolorem vitae quibusdam! Fuga
+              excepturi autem nemo reprehenderit quibusdam. Assumenda labore aut
+              ipsa magni magnam impedit doloribus officiis ullam ut.
+            </p>
+          </div>
+        </section>
+
+        <section class="blog-post">
+          <img src="{%static 'images/b5.jpg'%}" alt="Blog Post Image" />
+          <h2>Post Title 5</h2>
+          <p class="meta">Posted by Jane Smith on January 5, 2024</p>
+          <div class="blog-content">
+            <p>
+              Nulla facilisi. Sed commodo nisi ac urna molestie fermentum.
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+              posuere cubilia Curae; Cras fringilla justo vel felis placerat
+              malesuada. Lorem ipsum dolor sit amet consectetur, adipisicing
+              elit. Labore temporibus facere vel corporis accusamus velit,
+              asperiores minus similique quibusdam adipisci cum magnam obcaecati
+              quae recusandae porro, maiores est consectetur ab! Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Rem reprehenderit
+              labore aut provident accusantium quo modi cum consectetur neque,
+              dignissimos dolore laboriosam voluptatem dolorem reiciendis amet
+              sit cumque quis accusamus!
+            </p>
+          </div>
+        </section>
+
+        <section class="blog-post">
+          <img src="{%static 'images/b6.jpg'%}" alt="Blog Post Image" />
+          <h2>Post Title 6</h2>
+          <p class="meta">Posted by Jane Smith on January 5, 2024</p>
+          <div class="blog-content">
+            <p>
+              Nulla facilisi. Sed commodo nisi ac urna molestie fermentum.
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+              posuere cubilia Curae; Cras fringilla justo vel felis placerat
+              malesuada. Lorem ipsum dolor sit amet consectetur, adipisicing
+              elit. Placeat laboriosam cum inventore quae? Aspernatur cum, quam
+              est, rerum minus magni officia hic error tempora iste ut quo unde
+              voluptas eos. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Numquam, quasi quod? Aliquid, unde delectus, iste, molestias
+              deserunt repellendus obcaecati magnam sint totam est saepe neque
+              earum! Corporis possimus quae enim.
+            </p>
+          </div>
+        </section>
+
+        <section class="blog-post">
+          <img src="{%static 'images/b2.jpg'%}" alt="Blog Post Image" />
+          <h2>Post Title 7</h2>
+          <p class="meta">Posted by Jane Smith on January 5, 2024</p>
+          <div class="blog-content">
+            <p>
+              Nulla facilisi. Sed commodo nisi ac urna molestie fermentum.
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+              posuere cubilia Curae; Cras fringilla justo vel felis placerat
+              malesuada. Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit. Necessitatibus aliquid, fugit deleniti a animi eveniet illo
+              numquam enim nobis, explicabo accusantium nesciunt qui eum ea? Est
+              iste qui quos numquam.
+            </p>
+          </div>
+        </section>
+
+        <section class="blog-post">
+          <img src="{%static 'images/b4.jpg'%}" alt="Blog Post Image" />
+          <h2>Post Title 8</h2>
+          <p class="meta">Posted by Jane Smith on January 5, 2024</p>
+          <div class="blog-content">
+            <p>
+              Nulla facilisi. Sed commodo nisi ac urna molestie fermentum.
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+              posuere cubilia Curae; Cras fringilla justo vel felis placerat
+              malesuada. Lorem ipsum dolor sit, amet consectetur adipisicing
+              elit. Ipsam ea, voluptates deleniti tenetur laboriosam quae
+              voluptatibus facilis alias adipisci repellendus ab itaque nesciunt
+              officia iure minima error quaerat harum fuga.
+            </p>
+          </div>
+        </section>
+      </div>
+      {% include "footer/footer.html" %}
+    </main>
+  </body>
+</html>

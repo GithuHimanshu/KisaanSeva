@@ -1,0 +1,154 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonials</title>
+    <link
+      rel="stylesheet"
+      href="{% static 'css/testimonial/testimonials.css' %}"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    {% include "navbar/navbar.html" %}
+    <main>
+      <div class="page-header" data-aos="fade-down">
+        <h1>Our Testimonial</h1>
+      </div>
+      <section class="testimonial-list">
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+          <img
+            src="{% static 'images/img1.jpg' %}"
+            alt="Testimonial Author 1"
+            class="testimonial-image"
+          />
+          <div class="testimonial-content">
+            <p class="headline">Outstanding Learning Experience</p>
+            <p class="quote">
+              "The courses were well-structured and the instructors were very
+              knowledgeable. I gained a lot of practical skills that I can apply
+              in my career."
+            </p>
+          </div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+          <img
+            src="{% static 'images/testimonials/img2.jpg' %}"
+            alt="Testimonial Author 2"
+            class="testimonial-image"
+          />
+          <div class="testimonial-content">
+            <p class="headline">Highly Recommend</p>
+            <p class="quote">
+              "A fantastic platform for learning new skills. The support from
+              the staff and community was exceptional, making the learning
+              process enjoyable."
+            </p>
+          </div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+          <img
+            src="{% static 'images/testimonials/img3.jpg' %}"
+            alt="Testimonial Author 3"
+            class="testimonial-image"
+          />
+          <div class="testimonial-content">
+            <p class="headline">Great Value for Money</p>
+            <p class="quote">
+              "I was impressed with the quality of the courses offered. They
+              were affordable yet provided immense value and knowledge."
+            </p>
+          </div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
+          <img
+            src="{% static 'images/testimonials/img4.jpg' %}"
+            alt="Testimonial Author 4"
+            class="testimonial-image"
+          />
+          <div class="testimonial-content">
+            <p class="headline">Transformative Experience</p>
+            <p class="quote">
+              "The learning experience was transformative. It helped me change
+              my career path and find a job in the tech industry."
+            </p>
+          </div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
+          <img
+            src="{% static 'images/testimonials/img4.jpg' %}"
+            alt="Testimonial Author 4"
+            class="testimonial-image"
+          />
+          <div class="testimonial-content">
+            <p class="headline">Transformative Experience</p>
+            <p class="quote">
+              "The learning experience was transformative. It helped me change
+              my career path and find a job in the tech industry."
+            </p>
+          </div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
+          <img
+            src="{% static 'images/testimonials/img4.jpg' %}"
+            alt="Testimonial Author 4"
+            class="testimonial-image"
+          />
+          <div class="testimonial-content">
+            <p class="headline">Transformative Experience</p>
+            <p class="quote">
+              "The learning experience was transformative. It helped me change
+              my career path and find a job in the tech industry."
+            </p>
+          </div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
+          <img
+            src="{% static 'images/testimonials/img4.jpg' %}"
+            alt="Testimonial Author 4"
+            class="testimonial-image"
+          />
+          <div class="testimonial-content">
+            <p class="headline">Transformative Experience</p>
+            <p class="quote">
+              "The learning experience was transformative. It helped me change
+              my career path and find a job in the tech industry."
+            </p>
+          </div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="500">
+          <img
+            src="{% static 'images/testimonials/img5.jpg' %}"
+            alt="Testimonial Author 5"
+            class="testimonial-image"
+          />
+          <div class="testimonial-content">
+            <p class="headline">Excellent Resources</p>
+            <p class="quote">
+              "The resources and materials provided were top-notch. They made
+              complex topics easy to understand and follow."
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="{% static 'js/myswiper.js' %}"></script>
+    <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    {% include "footer/footer.html" %}
+  </body>
+</html>

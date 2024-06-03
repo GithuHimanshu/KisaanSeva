@@ -1,0 +1,194 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Sign Up Form</title>
+    <link rel="stylesheet" href="{%static 'css/farmerlogin/farmerlogin.css'%}" />
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        .headerclass {
+            height: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="headerclass">
+
+        {% include "navbar/navbar.html" %}
+    </div>
+    <div class="error-massages">
+        {% include 'massage/massage.html' %}
+    </div>
+    <div class="container bg mt-5">
+        <form class="form-signin needs-validation" name="farmerloginform" id="loginForm" action="/login/loginscholar/"
+            method='POST' novalidate>
+            {% csrf_token %}
+            <h2 class="text-center head mb-4">Scholar Login</h2>
+            <div class="form-group">
+                <label for="inputEmail" class="sr-only">Email address</label>
+                <div class="input-group">
+                    <input type="email" id="inputEmail" class="form-control" name="scholarEmail"
+                        placeholder="Enter Your Email address" required autofocus autocomplete="off">
+                    <div class="input-group-append">
+                        <span class="input-group-text">
+                            <i class="fas fa-envelope light icon"></i>
+
+                        </span>
+                    </div>
+                    <div class="invalid-feedback">
+                        Please Enter a valid email.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword" class="sr-only">Password</label>
+                <div class="input-group">
+                    <input type="password" id="inputPassword" name="scholarPassword" class="form-control"
+                        placeholder="Enter Your Password" required autocomplete="off">
+                    <div class="input-group-append">
+                        <span class="input-group-text show-password"><i class="fas fa-eye-slash icon"></i></span>
+                    </div>
+                    <div class="invalid-feedback">
+                        Please Enter a valid password.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group text-center">
+                <a href="#" class="text-decoration-none">Forgot Password?</a>
+            </div>
+            <button class="btn btn-lg btn btn-success btn-block " type="submit">Sign in</button>
+            <p class="mt-3 mb-2 text-muted text-center">Or</p>
+
+            <p class="mt-2 mb-3 text-center">Don't have an account? <a href="#" id="toggleForm">Sign up here</a></p>
+        </form>
+
+        <form class="form-signin needs-validation d-none" id="signupForm" action="/login/add-scholar/" method="POST"
+            novalidate>
+            {% csrf_token %}
+            <h2 class="text-center head mb-4">Scholar Sign Up</h2>
+            <div class="form-group">
+                <label for="inputFirstName" class="sr-only">Scholar Name</label>
+                <div class="input-group">
+                    <input type="text" id="inputFirstName" class="form-control" name="Scholar_name"
+                        placeholder="Enter Scholar Name" required autocomplete="off">
+                    <div class="input-group-append">
+                        <span class="input-group-text">
+                            <i class="fas fa-user light icon"></i>
+
+                        </span>
+                    </div>
+                    <div class="invalid-feedback">
+                        Please provide your Scholar name.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputFirstName" class="sr-only">Contact Number</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" name="Contact_num" placeholder="Enter Contact Number "
+                        required autocomplete="off">
+                    <div class="input-group-append">
+                        <span class="input-group-text">
+                            <i class="fas fa-phone icon"></i>
+
+                        </span>
+                    </div>
+                    <div class="invalid-feedback">
+                        Please provide your Farmer name.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmailSignup" class="sr-only">Email address</label>
+                <div class="input-group">
+                    <input type="email" id="inputEmailSignup" class="form-control" name="Email_id"
+                        placeholder="Email address" required autocomplete="off">
+                    <div class="input-group-append">
+                        <span class="input-group-text">
+                            <i class="fas fa-envelope light icon"></i>
+
+                        </span>
+                    </div>
+                    <div class="invalid-feedback">
+                        Please provide a valid email.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPasswordSignup" class="sr-only">Password</label>
+                <div class="input-group">
+                    <input type="password" id="inputPasswordSignup" name="Password" class="form-control"
+                        placeholder="Password" required autocomplete="off">
+                    <div class="input-group-append">
+                        <div class="input-group-append">
+                            <span class="input-group-text show-password"><i class="fas fa-eye-slash icon"></i></span>
+                        </div>
+                    </div>
+                    <div class="invalid-feedback">
+                        Please provide a password.
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-lg btn btn-success btn-block " type="submit">Create Account</button>
+
+            <p class="mt-3 mb-2 text-muted text-center">Or</p>
+
+            <p class="mt-2 mb-3 text-center">Already have an account? <a href="#" id="toggleForm">Login</a></p>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script>
+        // Show/hide password functionality
+        document.querySelectorAll('.show-password').forEach(item => {
+            item.addEventListener('click', event => {
+                const input = item.closest('.input-group').querySelector('input');
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    item.innerHTML = '<i class="fas fa-eye icon"></i>';
+                } else {
+                    input.type = 'password';
+                    item.innerHTML = ' <i class="fas fa-eye-slash icon"></i>';
+                }
+            });
+        });
+
+        // Toggle between login and sign up forms
+        document.querySelectorAll('#toggleForm').forEach(item => {
+            item.addEventListener('click', event => {
+                event.preventDefault();
+                document.getElementById('loginForm').classList.toggle('d-none');
+                document.getElementById('signupForm').classList.toggle('d-none');
+            });
+        });
+
+        // Bootstrap validation setup
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+</body>
+
+</html>

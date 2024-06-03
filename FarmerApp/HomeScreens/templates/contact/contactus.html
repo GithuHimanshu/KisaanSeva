@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="{%static 'css/contact/contactus.css'%}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css/" />
+</head>
+
+<body>
+  {% include "navbar/navbar.html" %}
+
+  <div>
+    <div class="header">
+      <a href="index.html"><img class="clogo" src="{%static 'images/l1.png'%}" alt="logo" /></a>
+      <h1>Contact Us</h1>
+      <p>
+        We'd love to hear from you. Fill out the form below to get in touch!
+      </p>
+    </div>
+    <div class="contact-info">
+      <p>
+        <i class="fas fa-map-marker-alt icons"></i> Address: Noida,Uttar
+        Pradesh,INDIA.
+      </p>
+      <p><i class="fas fa-phone icons"></i> Phone: 9999363954</p>
+      <p><i class="fas fa-envelope icons"></i> Email: Info@Codxia.com</p>
+    </div>
+    <div class="social-icons">
+      <a href="#" title="Facebook"><i class="fab fa-facebook icons"></i></a>
+      <a href="#" title="Twitter"><i class="fab fa-twitter icons"></i></a>
+      <a href="#" title="Instagram"><i class="fab fa-instagram icons"></i></a>
+      <a href="#" title="LinkedIn"><i class="fab fa-linkedin icons"></i></a>
+    </div>
+    <form action="/contactusform/" method="POST">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" placeholder="Enter your name" id="name" name="name" required />
+        <i class="fas fa-user icon"></i>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        <i class="fas fa-envelope icon"></i>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Write your query here....." required></textarea>
+        <i class="fas fa-comment icon"></i>
+      </div>
+      <div class="submit-button">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+{% include "footer/footer.html" %}
+
+</html>

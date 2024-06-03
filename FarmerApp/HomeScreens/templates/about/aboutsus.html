@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Farmer's Hub</title>
+    <link rel="stylesheet" href="{% static 'css/about/aboutuS.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <style>
+      .headerclass {
+        height: 70px;
+      }
+    </style>
+  </head>
+
+  <body>
+    {% include "navbar/navbar.html" %}
+    <section>
+      <section class="about-section">
+        <h2>We Keep Our Promises</h2>
+        <p class="subtitle">We Listen, You Prosper</p>
+        <p class="text">
+          Objectively integrate enterprise-wide strategic theme areas with
+          functionalized infrastructures, interactively productize premium
+          technologies.
+        </p>
+        <div class="features">
+          <div class="feature">
+            <img src="{% static 'images/b1.png' %}" alt="Feature 1" />
+            <h3>Avantage Services</h3>
+            <p>
+              Avantage Group is all about strategy, we’re here to inform which
+              tactics need funding and which are drains on resources.
+            </p>
+            <a href="#">Find out more</a>
+          </div>
+          <div class="feature">
+            <img src="{% static 'images/b2.jpg' %}" alt="Feature 2" />
+            <h3>Our Approach</h3>
+            <p>
+              Avantage Group is all about strategy, we’re here to inform which
+              tactics need funding and which are drains on resources.
+            </p>
+            <a href="#">Find out more</a>
+          </div>
+          <div class="feature">
+            <img src="{% static 'images/b3.jpg' %}" alt="Feature 3" />
+            <h3>Avantage Results</h3>
+            <p>
+              Avantage Group is all about strategy, we’re here to inform which
+              tactics need funding and which are drains on resources.
+            </p>
+            <a href="#">Find out more</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-members">
+          <div class="team-member">
+            <img src="{% static 'images/b3.jpg' %}" alt="Farmer 1" />
+            <h3>John Doe</h3>
+            <p>CEO & Founder</p>
+          </div>
+          <div class="team-member">
+            <img src="{% static 'images/b4.jpg' %}" alt="Farmer 2" />
+            <h3>Jane Smith</h3>
+            <p>Agricultural Specialist</p>
+          </div>
+          <div class="team-member">
+            <img src="{% static 'images/b6.jpg' %}" alt="Farmer 3" />
+            <h3>David Johnson</h3>
+            <p>Marketing Manager</p>
+          </div>
+          <div class="team-member">
+            <img src="{% static 'images/b3.jpg' %}" alt="Farmer 3" />
+            <h3>David Johnson</h3>
+            <p>Marketing Manager</p>
+          </div>
+          <div class="team-member">
+            <img src="{% static 'images/b4.jpg' %}" alt="Farmer 3" />
+            <h3>David Johnson</h3>
+            <p>Marketing Manager</p>
+          </div>
+          <div class="team-member">
+            <img src="{% static 'images/b1.png' %}" alt="Farmer 3" />
+            <h3>David Johnson</h3>
+            <p>Marketing Manager</p>
+          </div>
+        </div>
+      </section>
+    </section>
+    {% include "footer/footer.html" %}
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll(
+          ".about-section, .team-section, .feature, .team-member"
+        );
+
+        const options = {
+          threshold: 0.1,
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, options);
+
+        sections.forEach((section) => {
+          observer.observe(section);
+        });
+      });
+    </script>
+  </body>
+</html>

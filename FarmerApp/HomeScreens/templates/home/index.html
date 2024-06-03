@@ -1,0 +1,301 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Kissan Seva</title>
+  <link rel="stylesheet" href="{%static 'css/home/index.css'%}" />
+  <link rel="stylesheet" href="{%static 'css/navber/navber.css'%}" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <style>
+    @media screen and (max-width: 560px) {
+      section .cards .card {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+
+    .section__header,
+    .section__description {
+      text-align: center;
+    }
+
+    section {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 80px 0 0;
+    }
+
+    .swiper {
+      margin-top: 2rem;
+      padding-bottom: 2rem;
+      width: 100%;
+      max-width: 1050px;
+    }
+
+    .swiper-slide {
+      max-width: 500px;
+      padding-inline: 1rem;
+      padding-top: 4rem;
+    }
+
+    .client__card {
+      position: relative;
+      padding: 4rem 2rem 2rem;
+      border-radius: 5px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      background-color: var(--cards-bg);
+    }
+
+    .client__card img {
+      position: absolute;
+      top: 0;
+      left: 2rem;
+      transform: translateY(-50%);
+      max-width: 80px;
+      width: 80px;
+      height: 80px;
+      border-radius: 100%;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .client__ratings {
+      margin-bottom: 1rem;
+      color: goldenrod;
+    }
+
+    .client__card p {
+      margin-bottom: 1rem;
+      color: var(--cards-text);
+    }
+
+    .client__card h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--heading-color);
+    }
+
+    .client__card h5 {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--cards-text);
+    }
+
+    /* Media Queries for Responsiveness */
+
+    @media (max-width: 1024px) {
+      .swiper-slide {
+        text-align: center;
+        max-width: 450px;
+        padding-inline: 1rem;
+        padding-top: 3rem;
+      }
+
+      .client__card img {
+        max-width: 70px;
+        width: 70px;
+        height: 70px;
+      }
+
+      .client__card h4 {
+        font-size: 1.1rem;
+      }
+
+      .client__card h5 {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .swiper-slide {
+        max-width: 400px;
+        padding-inline: 0.5rem;
+        padding-top: 2rem;
+      }
+
+      .client__card {
+        padding: 3rem 1.5rem 1.5rem;
+      }
+
+      .client__card img {
+        max-width: 60px;
+        width: 60px;
+        height: 60px;
+      }
+
+      .client__card h4 {
+        font-size: 1rem;
+      }
+
+      .client__card h5 {
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .swiper-slide {
+        max-width: 300px;
+        padding-inline: 0.5rem;
+        padding-top: 2rem;
+      }
+
+      .client__card {
+        padding: 2rem 1rem 1rem;
+      }
+
+      .client__card img {
+        max-width: 50px;
+        width: 50px;
+        height: 50px;
+      }
+
+      .client__card h4 {
+        font-size: 0.9rem;
+      }
+
+      .client__card h5 {
+        font-size: 0.7rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>{% include "navbar/navbar.html" %}</header>
+
+  <main>
+    <!-- <section> -->
+    {% include 'hero/hero.html' %}
+    <!-- </section> -->
+
+    <!-- <section> -->
+    {% include 'services/services.html' %}
+    <!-- </section> -->
+
+    <div>{% include 'blog/problemblogs.html' %}</div>
+    <section>{% include 'chatwithus/chatwithus.html' %}</section>
+
+    <section>{% include 'feedbackform/feedbackform.html' %}</section>
+
+    <section class="section__container client__container" id="client">
+      <h2 class="section__header">What People Says About Us?</h2>
+      <p class="section__description">
+        Farming Solutions: Innovating for Sustainable Farming. Transforming
+        Indian Agriculture.
+      </p>
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img
+                src="https://images.pexels.com/photos/19486033/pexels-photo-19486033/free-photo-of-photo-of-a-man-sitting-in-a-barn.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="client" />
+              <div class="client__ratings">
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-line"></i></span>
+              </div>
+              <p>
+                Farming Solutions has been instrumental in revolutionizing the
+                way we approach agriculture. Their innovative methods and
+                personalized guidance have significantly boosted our farm's
+                productivity. I highly recommend their services to fellow
+                farmers.
+              </p>
+              <h4>Rajesh Patel</h4>
+              <h5>farmer</h5>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img
+                src="https://images.pexels.com/photos/14915250/pexels-photo-14915250.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="client" />
+              <div class="client__ratings">
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-half-fill"></i></span>
+              </div>
+              <p>
+                I'm incredibly grateful for the support and expertise provided
+                by Farming Solutions. Their team's deep knowledge of Indian
+                agriculture and dedication to sustainable practices have made
+                a profound impact on our farm's success. Thank you for your
+                invaluable contributions.
+              </p>
+              <h4>Priya Sharma</h4>
+              <h5>Research scholar</h5>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img
+                src="https://images.pexels.com/photos/8261306/pexels-photo-8261306.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="client" />
+              <div class="client__ratings">
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-half-fill"></i></span>
+                <span><i class="ri-star-line"></i></span>
+              </div>
+              <p>
+                Partnering with Farming Solutions has been a game-changer for
+                our family farm. Their tailored solutions and commitment to
+                excellence have helped us overcome challenges and achieve
+                remarkable results. I wholeheartedly endorse their services to
+                farmers across India.
+              </p>
+              <h4>Rahul Gupta</h4>
+              <h5>farmer</h5>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img
+                src="https://images.pexels.com/photos/14767236/pexels-photo-14767236.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="client" />
+              <div class="client__ratings">
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+              </div>
+              <p>
+                "Farming Solutions has been a trusted ally in our farming
+                journey. Their holistic approach and innovative techniques
+                have not only increased our farm's yield but also improved
+                soil health and sustainability. We're proud to be associated
+                with such a reputable organization.
+              </p>
+              <h4>Anjali Patel</h4>
+              <h5>Research scholar</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>{% include "footer/footer.html" %}</footer>
+
+  <!-- javascript -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="{%static 'js/index.js'%}"></script>
+</body>
+
+</html>

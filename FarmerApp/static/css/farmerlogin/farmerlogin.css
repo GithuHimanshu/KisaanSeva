@@ -1,0 +1,63 @@
+body {
+  background-image: url("/static/images/loginimage1.jpg");
+  background-repeat: no-repeat;
+  /* background-position: 100% 100%; */
+  width: 100%;
+  background-size: 100% 100%;
+
+}
+
+#toggleForm {
+
+  text-decoration: none;
+}
+.head {
+  color: var(--heading-color);
+}
+.icon {
+  color: var(--heading-color);
+}
+.form-signin {
+  max-width: 380px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control-feedback {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.6s ease-in;
+  font-size: 18px;
+}
+
+.form-signin .form-control-feedback.light {
+  color: #495057;
+  /* Dark Gray */
+}
+
+.form-signin .form-control-feedback.dark {
+  color: #dee2e6;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.show-password {
+  cursor: pointer;
+}
+.mt-5 {
+  margin-top: 5rem !important;
+}
+.btn-success {
+  background-color: var(--heading-color);
+}
