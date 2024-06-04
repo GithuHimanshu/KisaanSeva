@@ -4,12 +4,12 @@ body {
   /* background-position: 100% 100%; */
   width: 100%;
   background-size: 100% 100%;
-
+  height: 100vh;
 }
 
 #toggleForm {
-
   text-decoration: none;
+  color: #b8e70c;
 }
 .head {
   color: var(--heading-color);
@@ -17,6 +17,10 @@ body {
 .icon {
   color: var(--heading-color);
 }
+.center {
+  color: #ccc;
+}
+
 .form-signin {
   max-width: 380px;
   padding: 15px;

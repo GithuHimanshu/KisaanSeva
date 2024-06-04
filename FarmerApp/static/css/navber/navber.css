@@ -15,12 +15,12 @@
   --body-color: #ebebe8;
   --nav-color: #35662f;
   /* --nav-color: rgb(255 255 255 / 80%); */
-  --nav-logo-color: black;
+  --nav-logo-color: #d1e7dd;
   --dropdown-color: #f9f9f9;
   --dropdown-text-color: #010718;
   --side-nav: #35662f;
   --text-color: #fefbf6;
-  --heading-color: #778a35;
+  --heading-color: #b8e70c;
   --search-bar: #f2f2f2;
   --search-text: #31352e;
   --sub-heading: #f8f8f8;
@@ -30,7 +30,7 @@
   --cards-text: #777;
   --primary-green: #212121;
   --button-col: #35662f;
-  --button-col-hover: #778a35;
+  --button-col-hover: #b8e70c;
   --button-secondary: #778a35;
 
   --footer-bg: #333333;
@@ -102,7 +102,7 @@ nav .nav-bar .logo a {
   font-size: 25px;
   font-style: italic;
   font-weight: 500;
-  color: var(--text-color);
+  color: #b8e70c;
   text-decoration: none;
 }
 span {
@@ -175,8 +175,8 @@ span {
   transition: all 0.3s ease;
 }
 i:hover {
-  background-color: var(--body-color);
-  color: var(--button-col);
+  background-color: #ebebe8;
+  color: var(--nav-color);
   border-radius: 50%;
   padding: 0.4rem;
 }

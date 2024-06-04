@@ -51,7 +51,7 @@
 
 .name {
   font-weight: bold;
-  color: var(--heading-color) !important;
+  color: var(--cards-heading) !important;
 }
 
 .received {
